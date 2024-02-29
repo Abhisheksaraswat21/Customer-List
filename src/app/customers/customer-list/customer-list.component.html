@@ -1,7 +1,20 @@
 <div class="customer-list">
-  <h2>Customer List</h2>
+  <h1>Customer List</h1>
 
-  <button class="logout-btn" (click)="logout()">Logout</button>
+  <div>
+    <p class="username" *ngIf="isLoggedIn">
+      Hello, <span> {{ currentUser.username }}</span>
+    </p>
+    <p class="username" *ngIf="isLoggedIn">
+      Role - <span> {{ currentUser.role }}</span>
+    </p>
+    <button *ngIf="isLoggedIn" class="logout-btn" (click)="logout()">
+      Logout
+    </button>
+    <button *ngIf="!isLoggedIn" class="logout-btn" routerLink="/login">
+      Login
+    </button>
+  </div>
 
   <button
     class="add-customer-btn"

@@ -11,7 +11,12 @@ import { Router } from '@angular/router';
 })
 export class CustomerListComponent implements OnInit {
   customers: Customer[] = [];
-  isAdmin: boolean = false;
+  isLoggedIn: boolean = false;
+  currentUser = {
+    username: '',
+    role: '',
+    password: '',
+  };
 
   constructor(
     private authService: AuthService,
@@ -21,7 +26,8 @@ export class CustomerListComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadCustomers();
-    this.isAdmin = this.authService.isAdmin();
+    this.isLoggedIn = this.authService.isLoggedIn();
+    this.currentUser = this.authService.getCurrentUser();
   }
 
   loadCustomers(): void {
