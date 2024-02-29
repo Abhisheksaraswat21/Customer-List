@@ -1,0 +1,42 @@
+<div class="customer-list">
+  <h2>Customer List</h2>
+
+  <button class="logout-btn" (click)="logout()">Logout</button>
+
+  <button
+    class="add-customer-btn"
+    mat-raised-button
+    color="primary"
+    routerLink="/customers/add"
+  >
+    Add Customer
+  </button>
+
+  <table class="customer-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.email }}</td>
+        <td>{{ customer.phone }}</td>
+        <td>{{ customer.address }}</td>
+        <td>
+          <button class="delete-btn" (click)="deleteCustomer(customer.id)">
+            Delete
+          </button>
+          <button class="edit-btn" (click)="editCustomer(customer.id)">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

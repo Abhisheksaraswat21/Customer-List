@@ -1,0 +1,64 @@
+.customer-list {
+    margin: 20px;
+  }
+  
+  .logout-btn {
+    margin-bottom: 10px;
+    margin-right: 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+  .add-customer-btn {
+    margin-bottom: 20px;
+  
+    background-color: #34dab3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .customer-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .customer-table th, .customer-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .customer-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .customer-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .customer-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .delete-btn, .edit-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .edit-btn {
+    background-color: #4CAF50;
+  }
+  

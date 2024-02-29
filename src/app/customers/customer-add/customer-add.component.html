@@ -1,0 +1,81 @@
+<div class="customer-add-container">
+  <div class="customer-add">
+    <h2>Add Customer</h2>
+    <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          ngModel
+          required
+          #name="ngModel"
+        />
+        <div
+          *ngIf="name.invalid && (name.dirty || name.touched)"
+          class="error-message"
+        >
+          <p class="error">Please enter the name!</p>
+          <!-- <div *ngIf="name.errors.required">Name is required.</div> -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          ngModel
+          required
+          #email="ngModel"
+        />
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="error-message"
+        >
+          <p class="error">Please enter the Email!</p>
+          <!-- <div *ngIf="email.errors.required">Email is required.</div>
+          <div *ngIf="email.errors.email">Invalid email format.</div> -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          ngModel
+          required
+          #phone="ngModel"
+        />
+        <div
+          *ngIf="phone.invalid && (phone.dirty || phone.touched)"
+          class="error-message"
+        >
+          <p class="error">Please enter the phone number!</p>
+          <!-- <div *ngIf="phone.errors.required">Phone is required.</div> -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          ngModel
+          required
+          #address="ngModel"
+        />
+        <div
+          *ngIf="address.invalid && (address.dirty || address.touched)"
+          class="error-message"
+        >
+          <p class="error">Please enter the address!</p>
+          <!-- <div *ngIf="address.errors.required">Address is required.</div> -->
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
